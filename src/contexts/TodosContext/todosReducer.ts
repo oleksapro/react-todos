@@ -11,7 +11,7 @@ export const todosReducer = produce<TodosReducer>((todos, action) => {
       break;
     case 'remove': {
       const index = todos.findIndex((todo) => todo.id === action.payload.id);
-      if (index !== -1) todos.splice(index, 1);
+      todos[index].deleted = true;
       break;
     }
     case 'update': {
@@ -22,6 +22,12 @@ export const todosReducer = produce<TodosReducer>((todos, action) => {
     case 'done': {
       const index = todos.findIndex((todo) => todo.id === action.payload.id);
       if (index !== -1) todos[index].done = !todos[index].done;
+      break;
+    }
+    case 'restore': {
+      const index = todos.findIndex((todo) => todo.id === action.payload.id);
+      todos[index].deleted = false;
+      break;
     }
   }
 });

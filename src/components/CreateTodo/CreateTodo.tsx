@@ -12,7 +12,13 @@ export const CreateTodo: React.FC<CreateTodoProps> = () => {
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => setTodoName(e.target.value);
 
   const add = () => {
-    addTodo({ id: uniqid(), name: todoName, done: false });
+    addTodo({
+      id: uniqid(),
+      name: todoName,
+      done: false,
+      createdDate: new Date().toString(),
+      deleted: false,
+    });
     setTodoName('');
   };
 

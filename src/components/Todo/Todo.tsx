@@ -2,6 +2,7 @@ import React from 'react';
 import { Todo as TodoType } from 'types';
 import { TodoEditingControls } from './TodoEditingControls';
 import { TodoName } from './TodoName';
+import { TodoRemovedControls } from './TodoRemovedControls';
 import { TodoToEditControls } from './TodoToEditControls';
 
 export interface TodoProps {
@@ -24,16 +25,17 @@ export const Todo: React.FC<TodoProps> = ({ todo }) => {
       )}
 
       <span>
-        {editingName === undefined && (
+        {!todo.deleted && editingName === undefined && (
           <TodoToEditControls todo={todo} startEditingName={startEditingName} />
         )}
-        {editingName !== undefined && (
+        {!todo.deleted && editingName !== undefined && (
           <TodoEditingControls
             todo={todo}
             editingName={editingName}
             resetEditingName={resetEditingName}
           />
         )}
+        {todo.deleted && <TodoRemovedControls todo={todo} />}
       </span>
     </div>
   );
