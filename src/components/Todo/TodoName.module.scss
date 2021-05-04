@@ -1,0 +1,8 @@
+.self {
+  cursor: pointer;
+  margin-right: 10px;
+
+  &.done {
+    text-decoration: line-through;
+  }
+}

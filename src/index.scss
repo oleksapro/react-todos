@@ -1,0 +1,54 @@
+@import 'assets/scss/colors';
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+button {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.button {
+  &-green-bg {
+    border-radius: 3px;
+    background-color: var(--caribbean-green);
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--caribbean-green);
+    color: var(--black);
+
+    &:disabled {
+      background-color: var(--grey);
+      border-color: var(--grey);
+      color: var(--black);
+    }
+  }
+
+  &-green {
+    background-color: unset;
+    border: 0;
+    color: var(--caribbean-green);
+    font-weight: 600;
+  }
+
+  &-blue {
+    background-color: unset;
+    border: 0;
+    color: var(--blue-ncs);
+    font-weight: 600;
+  }
+
+  &-red {
+    background-color: unset;
+    border: 0;
+    color: var(--paradise-pink);
+    font-weight: 600;
+  }
+}
