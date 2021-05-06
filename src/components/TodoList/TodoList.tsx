@@ -23,6 +23,7 @@ export const TodoList: React.FC<TodoListProps> = () => {
 
           return 0;
         })
+        .filter(({ deleted }) => !deleted)
         .map((todo) => (
           <Todo key={todo.id} todo={todo} />
         ))}

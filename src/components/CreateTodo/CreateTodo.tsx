@@ -31,9 +31,9 @@ export const CreateTodo: React.FC<CreateTodoProps> = () => {
     <form onSubmit={onSubmit}>
       <div className={s.self}>
         <label className={s.label}>Add todo:</label>
-        <input value={todoName} onChange={onChange} />
+        <input className={s.input} value={todoName} onChange={onChange} />
         <button
-          className={cn(s.add, 'button-green-bg')}
+          className={cn(s.button, 'button-green-bg')}
           disabled={!todoName}
           type="button"
           onClick={add}

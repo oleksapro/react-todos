@@ -4,6 +4,7 @@ import { TodoEditingControls } from './TodoEditingControls';
 import { TodoName } from './TodoName';
 import { TodoRemovedControls } from './TodoRemovedControls';
 import { TodoToEditControls } from './TodoToEditControls';
+import s from './Todo.module.scss';
 
 export interface TodoProps {
   todo: TodoType;
@@ -17,9 +18,9 @@ export const Todo: React.FC<TodoProps> = ({ todo }) => {
   const startEditingName = () => setEditingName(todo.name);
 
   return (
-    <div>
+    <div className={s.self}>
       {editingName !== undefined ? (
-        <input value={editingName} onChange={onEdit} />
+        <input className={s.input} value={editingName} onChange={onEdit} />
       ) : (
         <TodoName todo={todo} />
       )}
