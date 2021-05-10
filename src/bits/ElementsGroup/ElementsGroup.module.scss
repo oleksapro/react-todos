@@ -1,0 +1,8 @@
+.self {
+  display: flex;
+  align-items: center;
+}
+
+.child:not(:last-child) {
+  margin-right: 2px;
+}

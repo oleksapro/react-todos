@@ -1,6 +1,6 @@
 import { Todo } from 'types';
 
-export type ActionType = 'add' | 'remove' | 'update' | 'done' | 'restore';
+export type ActionType = 'add' | 'remove' | 'update' | 'done' | 'restore' | 'remove-completely';
 
 export interface Action {
   type: ActionType;
@@ -15,4 +15,5 @@ export interface TodosControls {
   updateTodo: ChangeTodo;
   doneTodo: ChangeTodo;
   restoreTodo: ChangeTodo;
+  removeCompletely: ChangeTodo;
 }

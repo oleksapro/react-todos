@@ -12,14 +12,24 @@
 .input {
   font-size: 14px;
   padding: 4px 5px;
-
-  &:focus {
-    width: 500px;
-  }
+  width: 300px;
 }
 
 .button {
   margin-left: 5px;
   padding: 4px 10px;
   text-transform: uppercase;
+}
+
+.plus {
+  color: var(--blue-ncs);
+  margin-right: 10px;
+
+  svg {
+    width: 20px;
+  }
+
+  &.opened {
+    transform: rotate(45deg);
+  }
 }

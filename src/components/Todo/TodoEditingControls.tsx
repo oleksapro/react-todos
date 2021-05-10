@@ -1,6 +1,8 @@
 import React from 'react';
 import { TodosUpdaterContext } from 'contexts';
 import { Todo } from 'types';
+import { SaveSolid } from 'assets/icons';
+import { ElementsGroup } from 'bits';
 
 interface TodoEditingControlsProps {
   editingName: string | undefined;
@@ -23,13 +25,13 @@ export const TodoEditingControls: React.FC<TodoEditingControlsProps> = ({
   const onClickCancel = () => resetEditingName();
 
   return (
-    <>
+    <ElementsGroup>
       <button className="button-green" disabled={!editingName} type="button" onClick={onClickSave}>
-        Save
+        <SaveSolid />
       </button>
       <button className="button-red" type="button" onClick={onClickCancel}>
         Cancel
       </button>
-    </>
+    </ElementsGroup>
   );
 };

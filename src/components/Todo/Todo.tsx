@@ -25,7 +25,7 @@ export const Todo: React.FC<TodoProps> = ({ todo }) => {
         <TodoName todo={todo} />
       )}
 
-      <span>
+      <div className={s.buttons}>
         {!todo.deleted && editingName === undefined && (
           <TodoToEditControls todo={todo} startEditingName={startEditingName} />
         )}
@@ -37,7 +37,7 @@ export const Todo: React.FC<TodoProps> = ({ todo }) => {
           />
         )}
         {todo.deleted && <TodoRemovedControls todo={todo} />}
-      </span>
+      </div>
     </div>
   );
 };

@@ -29,5 +29,10 @@ export const todosReducer = produce<TodosReducer>((todos, action) => {
       todos[index].deleted = false;
       break;
     }
+    case 'remove-completely': {
+      const index = todos.findIndex((todo) => todo.id === action.payload.id);
+      if (index !== -1) todos.splice(index, 1);
+      break;
+    }
   }
 });

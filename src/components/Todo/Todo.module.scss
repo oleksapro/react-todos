@@ -1,9 +1,14 @@
 .self {
   margin-bottom: 5px;
+  display: flex;
 }
 
 .input {
   padding: 4px 5px;
   width: 500px;
   margin-right: 5px;
+}
+
+.buttons {
+  margin-left: 5px;
 }
