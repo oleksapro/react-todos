@@ -1,6 +1,6 @@
 import { TodosUpdaterContext } from 'contexts';
 import React from 'react';
-import { TodoType } from '../../../../../_types';
+import { TodoType } from 'components/Todos/_types';
 
 interface TodoRemovedControlsProps {
   todo: TodoType;

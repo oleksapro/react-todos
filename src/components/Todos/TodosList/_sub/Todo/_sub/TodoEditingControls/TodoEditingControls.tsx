@@ -1,6 +1,6 @@
 import React from 'react';
 import { TodosUpdaterContext } from 'contexts';
-import { TodoType } from '../../../../../_types';
+import { TodoType } from 'components/Todos/_types';
 import { SaveSolid, TimesSolid } from 'assets/icons';
 import { ElementsGroup } from 'bits';
 

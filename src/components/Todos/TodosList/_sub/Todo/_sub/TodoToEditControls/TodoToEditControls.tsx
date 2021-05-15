@@ -1,8 +1,7 @@
 import React from 'react';
 import { TodosUpdaterContext } from 'contexts';
-import { TodoType } from '../../../../../_types';
-import { ElementsGroup, Menu } from 'bits';
-import { MenuItem } from 'bits/MenuItem';
+import { TodoType } from 'components/Todos/_types';
+import { ElementsGroup, Menu, MenuItem } from 'bits';
 
 export interface TodoToEditControlsProps {
   todo: TodoType;
