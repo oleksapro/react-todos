@@ -1,11 +1,11 @@
 import React from 'react';
 import { TodosUpdaterContext } from 'contexts';
-import { Todo } from 'types';
+import { TodoType } from '../../../../../_types';
 import { ElementsGroup, Menu } from 'bits';
 import { MenuItem } from 'bits/MenuItem';
 
 export interface TodoToEditControlsProps {
-  todo: Todo;
+  todo: TodoType;
   startEditingName: () => void;
 }
 

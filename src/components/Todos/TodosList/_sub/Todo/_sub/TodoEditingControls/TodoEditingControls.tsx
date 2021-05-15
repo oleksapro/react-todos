@@ -1,13 +1,13 @@
 import React from 'react';
 import { TodosUpdaterContext } from 'contexts';
-import { Todo } from 'types';
+import { TodoType } from '../../../../../_types';
 import { SaveSolid, TimesSolid } from 'assets/icons';
 import { ElementsGroup } from 'bits';
 
 interface TodoEditingControlsProps {
   editingName: string | undefined;
   resetEditingName: () => void;
-  todo: Todo;
+  todo: TodoType;
 }
 
 export const TodoEditingControls: React.FC<TodoEditingControlsProps> = ({

@@ -1,14 +1,14 @@
 import React from 'react';
-import { Todo } from '../Todo';
-import s from './TodoList.module.scss';
+import { Todo } from './_sub';
+import s from './TodosList.module.scss';
 import { TodosContext } from 'contexts';
-import { sortTodos } from 'components/utils';
+import { sortTodos } from '../_utils';
 
-export interface TodoListProps {
+export interface TodosListProps {
   title?: string;
 }
 
-export const TodoList: React.FC<TodoListProps> = ({ title }) => {
+export const TodosList: React.FC<TodosListProps> = ({ title }) => {
   const todos = React.useContext(TodosContext);
   const filteredTodos = sortTodos(todos).filter(({ deleted }) => !deleted);
 

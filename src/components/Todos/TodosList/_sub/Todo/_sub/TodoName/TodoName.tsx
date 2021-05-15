@@ -1,11 +1,11 @@
 import React from 'react';
 import { TodosUpdaterContext } from 'contexts';
-import { Todo } from 'types';
+import { TodoType } from 'components/Todos/_types';
 import s from './TodoName.module.scss';
 import { CheckSolid } from 'assets/icons';
 
 export interface TodoNameProps {
-  todo: Todo;
+  todo: TodoType;
 }
 
 export const TodoName: React.FC<TodoNameProps> = ({ todo }) => {

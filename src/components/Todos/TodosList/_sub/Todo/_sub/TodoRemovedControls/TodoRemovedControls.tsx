@@ -1,9 +1,9 @@
 import { TodosUpdaterContext } from 'contexts';
 import React from 'react';
-import { Todo } from 'types';
+import { TodoType } from '../../../../../_types';
 
 interface TodoRemovedControlsProps {
-  todo: Todo;
+  todo: TodoType;
 }
 
 export const TodoRemovedControls: React.FC<TodoRemovedControlsProps> = ({ todo }) => {

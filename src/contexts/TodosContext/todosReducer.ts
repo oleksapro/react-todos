@@ -1,8 +1,8 @@
 import { produce } from 'immer';
-import { Todo } from 'types';
+import { TodoType } from 'components/Todos/_types';
 import { Action } from './types';
 
-export type TodosReducer = (state: Todo[], action: Action) => Todo[];
+export type TodosReducer = (state: TodoType[], action: Action) => TodoType[];
 
 export const todosReducer = produce<TodosReducer>((todos, action) => {
   switch (action.type) {

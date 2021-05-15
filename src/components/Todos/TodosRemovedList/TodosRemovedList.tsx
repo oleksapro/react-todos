@@ -1,14 +1,14 @@
 import { AngleDownSolid, SkullCrossbonesSolid, TrashRestoreSolid } from 'assets/icons';
 import { ElementsGroup } from 'bits';
-import { TodoRow } from 'components/TodoRow';
-import { sortTodos } from 'components/utils';
+import { TodoRow } from 'components/Todos/_shared';
+import { sortTodos } from '../_utils';
 import { TodosContext, TodosUpdaterContext } from 'contexts';
 import { cn } from 'libs';
 import React from 'react';
-import { Todo } from 'types';
-import s from './RemovedTodoList.module.scss';
+import { TodoType } from 'components/Todos/_types';
+import s from './TodosRemovedList.module.scss';
 
-export const RemovedTodoList: React.FC = () => {
+export const TodosRemovedList: React.FC = () => {
   const todos = React.useContext(TodosContext);
   const { removeCompletely, restoreTodo } = React.useContext(TodosUpdaterContext);
   const [opened, setOpened] = React.useState(false);
@@ -17,13 +17,13 @@ export const RemovedTodoList: React.FC = () => {
 
   const onClickToggle = () => setOpened((opened) => !opened);
 
-  const onClickRemoveCompletely = (todo: Todo) => {
+  const onClickRemoveCompletely = (todo: TodoType) => {
     if (window.confirm(`Do you remove ${todo.name}?`)) {
       removeCompletely(todo);
     }
   };
 
-  const onClickRestore = (todo: Todo) => {
+  const onClickRestore = (todo: TodoType) => {
     if (window.confirm(`Do you want restore ${todo.name}?`)) {
       restoreTodo(todo);
     }

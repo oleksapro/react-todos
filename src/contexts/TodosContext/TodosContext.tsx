@@ -1,10 +1,10 @@
 import React from 'react';
 import { ls } from 'services';
-import { Todo } from 'types';
+import { TodoType } from 'components/Todos/_types';
 import { todosReducer, TodosReducer } from './todosReducer';
 import { TodosControls } from './types';
 
-export const TodosContext = React.createContext<Todo[]>([]);
+export const TodosContext = React.createContext<TodoType[]>([]);
 
 export const TodosUpdaterContext = React.createContext<TodosControls>({
   addTodo: () => {},
@@ -15,10 +15,10 @@ export const TodosUpdaterContext = React.createContext<TodosControls>({
   removeCompletely: () => {},
 });
 
-const initialTodos: Todo[] = ls.get<Todo[]>('todos') ?? [];
+const initialTodos: TodoType[] = ls.get<TodoType[]>('todos') ?? [];
 
 export const TodosContextProvider: React.FC = ({ children }) => {
-  const [todos, setTodos] = React.useReducer<TodosReducer, Todo[]>(
+  const [todos, setTodos] = React.useReducer<TodosReducer, TodoType[]>(
     todosReducer,
     [],
     () => initialTodos
@@ -30,12 +30,12 @@ export const TodosContextProvider: React.FC = ({ children }) => {
 
   const value = React.useMemo(
     () => ({
-      addTodo: (todo: Todo) => setTodos({ type: 'add', payload: todo }),
-      removeTodo: (todo: Todo) => setTodos({ type: 'remove', payload: todo }),
-      updateTodo: (todo: Todo) => setTodos({ type: 'update', payload: todo }),
-      doneTodo: (todo: Todo) => setTodos({ type: 'done', payload: todo }),
-      restoreTodo: (todo: Todo) => setTodos({ type: 'restore', payload: todo }),
-      removeCompletely: (todo: Todo) => setTodos({ type: 'remove-completely', payload: todo }),
+      addTodo: (todo: TodoType) => setTodos({ type: 'add', payload: todo }),
+      removeTodo: (todo: TodoType) => setTodos({ type: 'remove', payload: todo }),
+      updateTodo: (todo: TodoType) => setTodos({ type: 'update', payload: todo }),
+      doneTodo: (todo: TodoType) => setTodos({ type: 'done', payload: todo }),
+      restoreTodo: (todo: TodoType) => setTodos({ type: 'restore', payload: todo }),
+      removeCompletely: (todo: TodoType) => setTodos({ type: 'remove-completely', payload: todo }),
     }),
     []
   );

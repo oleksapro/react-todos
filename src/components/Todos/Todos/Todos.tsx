@@ -1,17 +1,17 @@
 import React from 'react';
 import { TodosContextProvider } from 'contexts';
-import { CreateTodo } from '../CreateTodo';
-import { TodoList } from '../TodoList';
+import { TodoCreate } from '../TodoCreate';
+import { TodosList } from '../TodosList';
 import s from './Todos.module.scss';
-import { RemovedTodoList } from '../RemovedTodoList';
+import { TodosRemovedList } from '../TodosRemovedList';
 
 export const Todos: React.FC = () => {
   return (
     <TodosContextProvider>
       <div className={s.self}>
-        <CreateTodo />
-        <TodoList />
-        <RemovedTodoList />
+        <TodoCreate />
+        <TodosList />
+        <TodosRemovedList />
       </div>
     </TodosContextProvider>
   );

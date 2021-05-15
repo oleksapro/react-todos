@@ -1,11 +1,8 @@
 import React from 'react';
-import { Todo as TodoType } from 'types';
-import { TodoEditingControls } from './TodoEditingControls';
-import { TodoName } from './TodoName';
-import { TodoRemovedControls } from './TodoRemovedControls';
-import { TodoToEditControls } from './TodoToEditControls';
+import { TodoType } from 'components/Todos/_types';
+import { TodoEditingControls, TodoName, TodoRemovedControls, TodoToEditControls } from './_sub';
 import s from './Todo.module.scss';
-import { TodoRow } from 'components/TodoRow';
+import { TodoRow } from 'components/Todos/_shared';
 
 export interface TodoProps {
   todo: TodoType;

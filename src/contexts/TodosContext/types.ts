@@ -1,13 +1,13 @@
-import { Todo } from 'types';
+import { TodoType } from 'components/Todos/_types';
 
 export type ActionType = 'add' | 'remove' | 'update' | 'done' | 'restore' | 'remove-completely';
 
 export interface Action {
   type: ActionType;
-  payload: Todo;
+  payload: TodoType;
 }
 
-export type ChangeTodo = (todo: Todo) => void;
+export type ChangeTodo = (todo: TodoType) => void;
 
 export interface TodosControls {
   addTodo: ChangeTodo;

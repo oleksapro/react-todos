@@ -1,4 +1,4 @@
-import { Todo as TodoType } from 'types';
+import { TodoType } from '../_types';
 
 export const sortTodos = (todos: TodoType[]) =>
   [...todos].sort((a, b) => {

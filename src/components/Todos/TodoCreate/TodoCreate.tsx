@@ -1,12 +1,12 @@
 import React from 'react';
 import { cn, uniqid } from 'libs';
 import { TodosUpdaterContext } from 'contexts';
-import s from './CreateTodo.module.scss';
+import s from './TodoCreate.module.scss';
 import { PlusSolid } from 'assets/icons';
 
-export interface CreateTodoProps {}
+export interface TodoCreateProps {}
 
-export const CreateTodo: React.FC<CreateTodoProps> = () => {
+export const TodoCreate: React.FC<TodoCreateProps> = () => {
   const [todoName, setTodoName] = React.useState('');
   const [opened, setOpened] = React.useState(false);
   const inputRef = React.useRef<HTMLInputElement>(null);
