@@ -2,6 +2,7 @@ import React from 'react';
 import { TodosUpdaterContext } from 'contexts';
 import { Todo } from 'types';
 import { ElementsGroup, Menu } from 'bits';
+import { MenuItem } from 'bits/MenuItem';
 
 export interface TodoToEditControlsProps {
   todo: Todo;
@@ -18,8 +19,8 @@ export const TodoToEditControls: React.FC<TodoToEditControlsProps> = ({
   return (
     <ElementsGroup>
       <Menu>
-        <div onClick={startEditingName}>Edit</div>
-        <div onClick={onClickRemove}>Delete</div>
+        <MenuItem onClick={startEditingName}>Edit</MenuItem>
+        <MenuItem onClick={onClickRemove}>Delete</MenuItem>
       </Menu>
     </ElementsGroup>
   );

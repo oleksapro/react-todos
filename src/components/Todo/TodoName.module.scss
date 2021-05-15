@@ -1,7 +1,10 @@
 .self {
   cursor: pointer;
+  position: relative;
 }
 
 .doneIcon {
   margin-right: 5px;
+  position: absolute;
+  left: -15px;
 }
