@@ -12,7 +12,7 @@ export const TodoRemovedControls: React.FC<TodoRemovedControlsProps> = ({ todo }
 
   return (
     <>
-      <button className="button-blue" type="button" onClick={onClickRestore}>
+      <button className="button button-blue" type="button" onClick={onClickRestore}>
         Restore
       </button>
     </>

@@ -2,6 +2,7 @@ import React from 'react';
 import { TodosUpdaterContext } from 'contexts';
 import { Todo } from 'types';
 import s from './TodoName.module.scss';
+import { CheckSolid } from 'assets/icons';
 
 export interface TodoNameProps {
   todo: Todo;
@@ -13,8 +14,13 @@ export const TodoName: React.FC<TodoNameProps> = ({ todo }) => {
   const onClick = () => doneTodo(todo);
 
   return (
-    <span className={`${s.self} ${todo.done ? s.done : ''}`} onClick={onClick}>
+    <div className={s.self} onClick={onClick}>
+      {todo.done && (
+        <span className={s.doneIcon}>
+          <CheckSolid />
+        </span>
+      )}
       {todo.name}
-    </span>
+    </div>
   );
 };

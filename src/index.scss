@@ -17,6 +17,9 @@ button {
 }
 
 .button {
+  display: inline-flex;
+  align-items: center;
+
   &-green-bg {
     border-radius: 3px;
     background-color: var(--caribbean-green);

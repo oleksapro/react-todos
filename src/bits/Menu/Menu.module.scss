@@ -1,0 +1,14 @@
+.self {
+  position: relative;
+}
+
+.body {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--white);
+  width: 100px;
+  border: 1px solid #000;
+  z-index: 10;
+  border-radius: 2px;
+}

@@ -3,6 +3,11 @@
   align-items: center;
 }
 
-.child:not(:last-child) {
-  margin-right: 2px;
+.child {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 2px;
+  }
 }

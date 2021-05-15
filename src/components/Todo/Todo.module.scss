@@ -1,8 +1,3 @@
-.self {
-  margin-bottom: 5px;
-  display: flex;
-}
-
 .input {
   padding: 4px 5px;
   width: 500px;
@@ -11,4 +6,6 @@
 
 .buttons {
   margin-left: 5px;
+  display: flex;
+  align-items: center;
 }

@@ -51,10 +51,9 @@ export const CreateTodo: React.FC<CreateTodoProps> = () => {
         </div>
         {opened && (
           <div>
-            <label className={s.label}>Add todo:</label>
             <input ref={inputRef} className={s.input} value={todoName} onChange={onChange} />
             <button
-              className={cn(s.button, 'button-green-bg')}
+              className={cn(s.button, 'button', 'button-green-bg')}
               disabled={!todoName}
               type="button"
               onClick={onClickAdd}

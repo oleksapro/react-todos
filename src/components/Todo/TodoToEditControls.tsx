@@ -1,8 +1,7 @@
 import React from 'react';
 import { TodosUpdaterContext } from 'contexts';
 import { Todo } from 'types';
-import { PencilAltSolid, TrashSolid } from 'assets/icons';
-import { ElementsGroup } from 'bits';
+import { ElementsGroup, Menu } from 'bits';
 
 export interface TodoToEditControlsProps {
   todo: Todo;
@@ -18,12 +17,10 @@ export const TodoToEditControls: React.FC<TodoToEditControlsProps> = ({
 
   return (
     <ElementsGroup>
-      <button type="button" className="button-blue" onClick={startEditingName}>
-        <PencilAltSolid />
-      </button>
-      <button type="button" className="button-red" onClick={onClickRemove}>
-        <TrashSolid />
-      </button>
+      <Menu>
+        <div onClick={startEditingName}>Edit</div>
+        <div onClick={onClickRemove}>Delete</div>
+      </Menu>
     </ElementsGroup>
   );
 };

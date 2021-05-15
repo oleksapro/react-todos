@@ -4,3 +4,7 @@ export { ReactComponent as PencilAltSolid } from './pencil-alt-solid.svg';
 export { ReactComponent as SaveSolid } from './save-solid.svg';
 export { ReactComponent as AngleDownSolid } from './angle-down-solid.svg';
 export { ReactComponent as PlusSolid } from './plus-solid.svg';
+export { ReactComponent as TrashRestoreSolid } from './trash-restore-solid.svg';
+export { ReactComponent as TimesSolid } from './times-solid.svg';
+export { ReactComponent as CheckSolid } from './check-solid.svg';
+export { ReactComponent as EllipsisVSolid } from './ellipsis-v-solid.svg';

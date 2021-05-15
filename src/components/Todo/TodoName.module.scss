@@ -1,7 +1,7 @@
 .self {
   cursor: pointer;
+}
 
-  &.done {
-    text-decoration: line-through;
-  }
+.doneIcon {
+  margin-right: 5px;
 }

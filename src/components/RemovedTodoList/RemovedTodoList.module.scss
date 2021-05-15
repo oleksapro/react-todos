@@ -1,3 +1,33 @@
 .self {
   margin-top: 20px;
 }
+
+.title {
+  display: flex;
+}
+
+.titleText {
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+
+.todos {
+  margin-top: 10px;
+}
+
+.name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.angleIcon {
+  display: flex;
+  color: var(--blue-ncs);
+  margin-left: 5px;
+
+  &.opened {
+    transform: rotate(180deg);
+  }
+}
