@@ -6,7 +6,7 @@ import { useOnClickOutside } from 'hooks';
 export const Menu: React.FC = ({ children }) => {
   const [opened, setOpened] = React.useState(false);
   const onClick = () => setOpened(true);
-  const ref = React.useRef(null);
+  const ref = React.useRef<HTMLDivElement>(null);
   useOnClickOutside(ref, () => setOpened(false));
 
   return (
